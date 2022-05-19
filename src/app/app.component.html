@@ -1,2 +1,3 @@
-<app-hello> </app-hello>
+<app-hello [data]="myName">  </app-hello>
 <router-outlet></router-outlet>
+<app-addproduct (onAdd)="onHandleAdd($event)"></app-addproduct>

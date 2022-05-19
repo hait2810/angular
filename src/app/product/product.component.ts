@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { typeProduct } from '../models/product';
+import { ProductServiceComponent } from '../services/product-service/product-service.component';
 
 @Component({
   selector: 'app-product',
@@ -6,10 +8,61 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
+  products:any;
+  constructor(private productService: ProductServiceComponent) {}
+  productStatus:boolean = true;
+  title = "Hai ";
+  listProduct() {
+    this.productService.getProducts().subscribe((data) => {
+      console.log(data);
+      
+        this.products = data;
+        
+    })
+  }
+  // ProductList: {id:number, name:string, price:number, status: boolean}[]  = [
+  //     {
+  //       id:1,
+  //       name:"Hai",
+  //       price:1359,
+  //       status:false
+  //     },
+  //     {
+  //       id:2,
+  //       name:"Hai2",
+  //       price:13591,
+  //       status:true
+  //     }
 
-  constructor() { }
+  // ]
+  // productDetail!: typeProduct | undefined
+  onHandleClick(){
+    
+    this.productStatus = !this.productStatus
+    
+  }
+  // onDelete(id:number) {
+  //   console.log(id);
+  //   this.ProductList = this.ProductList.filter(item => item.id != id)
+  // }
+  // change(event:any) {
+  //     this.title = event.target.value
+      
+  // }
+  // onAdd(bookForm:any) {
+   
+  //     this.ProductList.push(bookForm.value)
+      
+  // }
+
+  // onShow(id:number) {
+  //         this.productDetail = this.ProductList.find(item => item.id  === id)
+  //         console.log(this.productDetail);
+  // }
+ 
 
   ngOnInit(): void {
+    this.listProduct();
   }
 
 }

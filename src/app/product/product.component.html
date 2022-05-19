@@ -1,30 +1,85 @@
 <div class="container">
-    <h2>Basic Table</h2>
-    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
+
+
+    <!-- <h2>Thêm sản phẩm </h2>
+    <form #bookForm="ngForm">
+      <input type="text" name="name" ngModel placeholder="Name" id="name"> <br>
+      <input type="number" name="price" ngModel placeholder="Price"  id="price"> <br>
+      <button (click)="onAdd(bookForm)" class="btn btn-primary">Add Product</button>
+    </form>
+   
+    <form>
+      <input type="text" (keypress)="change($event)" value="{{title}}" name="" id="">
+      {{title}}
+    </form> -->
+    <h2>Danh sách sản phấm</h2>
+    <button (click)="onHandleClick()" class="btn btn-primary">Ẩn / Hiện</button>
+    <hr>
+    <!-- <h2>Ng Model</h2>
+    <input type="text" [(ngModel)]="title"  value="{{title}}" name="" id=""> {{title}} -->
+    <div *ngIf="productStatus">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th> 
+            <th>Img</th>   
+            <th>Delete</th>   
+            <th>View</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let productlist of products; let i = index">
+            <td>{{i + 1}}</td>
+            <td>{{productlist.name}}</td>
+            <td>{{productlist.price}}</td>
+            <td><img src={{productlist.img}} width="80px" height="60px" alt=""></td>
+            <!-- <td>{{product.status ? "Còn hàng" : "Hết hàng"}}</td> -->
+            <td><button class="btn btn-primary">Delete</button></td>
+            <td><a href="/product/{{productlist.id}}" class="btn btn-primary">View</a></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <h2>DANH SÁCH SẢN PHẨM 2 </h2>
     <table class="table">
       <thead>
         <tr>
-          <th>Firstname</th>
-          <th>Lastname</th>
-          <th>Email</th>
+          <th>#</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Status</th>
+          <th>Show</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>John</td>
-          <td>Doe</td>
-          <td>john@example.com</td>
+        <tr *ngFor="let product of ProductList; let i = index">
+          <td>{{i + 1}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.status ? "Còn hàng" : "Hết hàng"}}</td>
+          <td><button (click)="onShow(product.id)" class="btn btn-primary">Show</button></td>
         </tr>
-        <tr>
-          <td>Mary</td>
-          <td>Moe</td>
-          <td>mary@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
+        
       </tbody>
     </table>
-  </div>
+
+
+
+    <table class="table">
+     <tbody>
+      <tr *ngIf="productDetail">
+        
+        <td>{{productDetail.name}}</td>
+        <td>{{productDetail.price}}</td>
+        <td>{{productDetail.status ? "Còn hàng" : "Hết hàng"}}</td>
+        <td><button (click)="onShow(productDetail.id)" class="btn btn-primary">Show</button></td>
+      </tr>
+     </tbody>
+    </table>
+  </div> -->

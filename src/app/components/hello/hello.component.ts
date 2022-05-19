@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hello',
@@ -6,9 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./hello.component.css']
 })
 export class HelloComponent {
+  @Input() data!:string;
+  constructor() {}
+  ngOnInit():void {
+
+  }
   title = 'buoi1';
 }
 
 
 
-// tạo component ng g c header --skip-test
+// tạo component ng g c header --skip-tests
