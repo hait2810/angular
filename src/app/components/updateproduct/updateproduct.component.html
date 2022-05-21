@@ -1,7 +1,7 @@
-<p>Thêm sản phẩm</p>
+<p>Sửa sản phẩm</p>
 
 {{product | json}}
-<form (ngSubmit)="onSubmit()">
+<form (ngSubmit)="onEdit()">
     <div class="form-group">
         <label for="usr">Name:</label>
         <input type="text" [(ngModel)]="product.name" name="name" class="form-control" id="usr">
@@ -12,12 +12,12 @@
       </div>
       <div class="form-group">
         <label for="pwd">Img:</label>
-        <input type="file" name="img" (change)="onFileChanged($event)" class="form-control" id="pwd">
+        <input type="text" [(ngModel)]="product.img" name="img" class="form-control" id="pwd">
       </div>
       <div class="form-group">
         <label for="pwd">Desc:</label>
         <input type="text" [(ngModel)]="product.desc" name="desc" class="form-control" id="pwd">
       </div>
-      <button class="btn btn-primary">Add</button>
+      <button class="btn btn-primary">Edit</button>
 
 </form>

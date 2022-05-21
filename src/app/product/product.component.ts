@@ -8,17 +8,26 @@ import { ProductServiceComponent } from '../services/product-service/product-ser
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  products:any;
-  constructor(private productService: ProductServiceComponent) {}
+  products!: typeProduct[];
+  constructor(private productService: ProductServiceComponent) {
+    this.listProduct()
+  }
   productStatus:boolean = true;
   title = "Hai ";
   listProduct() {
     this.productService.getProducts().subscribe((data) => {
-      console.log(data);
+  //    console.log(data);
       
         this.products = data;
         
     })
+  }
+  onDelete(id:number) {
+    this.productService.deleteProduct(id).subscribe((data) => {
+        this.products = this.products.filter(data => data.id !== id);
+    })
+    
+    
   }
   // ProductList: {id:number, name:string, price:number, status: boolean}[]  = [
   //     {

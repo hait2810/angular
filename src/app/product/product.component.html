@@ -25,7 +25,7 @@
             <th>Name</th>
             <th>Price</th> 
             <th>Img</th>   
-            <th>Delete</th>   
+            <th>Act</th>   
             <th>View</th>
           </tr>
         </thead>
@@ -36,7 +36,10 @@
             <td>{{productlist.price}}</td>
             <td><img src={{productlist.img}} width="80px" height="60px" alt=""></td>
             <!-- <td>{{product.status ? "Còn hàng" : "Hết hàng"}}</td> -->
-            <td><button class="btn btn-primary">Delete</button></td>
+            <td><button (click)="onDelete(productlist.id!)" class="btn btn-primary">Delete</button>
+            
+            <a class="btn btn-primary" href="/product/{{productlist.id}}/edit">Sửa</a>
+            </td>
             <td><a href="/product/{{productlist.id}}" class="btn btn-primary">View</a></td>
           </tr>
           
