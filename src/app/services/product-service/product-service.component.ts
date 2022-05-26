@@ -22,14 +22,14 @@ export class ProductServiceComponent implements OnInit {
   getProduct(id:number | string):Observable<typeProduct> {
     return this.http.get<typeProduct>(`${apiUrl}/${id}`);
 } 
-  addProduct(product:typeProduct[]) {
-      return this.http.post(apiUrl, product);
+  addProduct(product:typeProduct) {
+      return this.http.post<typeProduct>(apiUrl, product);
   }
   deleteProduct(id:number): Observable<typeProduct> { 
       return this.http.delete<typeProduct>(`${apiUrl}/${id}`);
   }
-  updateProduct(product:typeProduct[], id:number | string) {
-    return this.http.put(`${apiUrl}/${id}`, product)
+  updateProduct(product:typeProduct, id:number | string) {
+    return this.http.put<typeProduct>(`${apiUrl}/${id}`, product)
   }
   ngOnInit(): void {  
   }

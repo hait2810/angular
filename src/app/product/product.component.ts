@@ -23,9 +23,12 @@ export class ProductComponent implements OnInit {
     })
   }
   onDelete(id:number) {
-    this.productService.deleteProduct(id).subscribe((data) => {
+    const confirm = window.confirm("Bạn có chắc chắn muốn xoá không");
+    if(confirm) { 
+      this.productService.deleteProduct(id).subscribe((data) => {
         this.products = this.products.filter(data => data.id !== id);
     })
+    }
     
     
   }

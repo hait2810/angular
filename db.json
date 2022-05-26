@@ -1,10 +1,10 @@
 {
   "products": [
     {
-      "name": "Hai 123",
-      "price": 123,
-      "desc": "Hi",
-      "img": "https://images.unsplash.com/photo-1496440737103-cd596325d314?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
+      "name": "Hai 1234",
+      "price": 1234,
+      "desc": "Hi4",
+      "img": "http://res.cloudinary.com/hait-10/image/upload/v1653544858/agn7e7x7sishz2pdzn5p.jpg",
       "id": 1
     },
     {
@@ -34,32 +34,6 @@
       "desc": "ad",
       "img": "https://images.unsplash.com/photo-1514315384763-ba401779410f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
       "id": 5
-    },
-    {
-      "name": "Bách",
-      "price": 390000,
-      "img": "http://media.doisongphapluat.com/699/2020/10/13/thieu-gia-ha-thanh-cong-khai-tinh-moi-dan-mang-dung-hinh-truoc-nhan-sac-cuc-pham-3-vong-quyen-ru-dspl-6.jpg",
-      "desc": "Hải Nguyễn Add",
-      "id": 6
-    },
-    {
-      "name": "Hải Nè",
-      "price": 1412941,
-      "desc": "Hải Nguyễn Add",
-      "id": 7
-    },
-    {
-      "name": "Nguyễn Văn Hải",
-      "price": 1412941,
-      "desc": "Hải Nguyễn Add",
-      "id": 8
-    },
-    {
-      "price": 390000,
-      "name": "Phương Anh",
-      "desc": "Hải Hải",
-      "img": "http://res.cloudinary.com/hait-10/image/upload/v1653149861/co4x7stxmhbhgyqmnjwl.jpg",
-      "id": 9
     }
   ]
 }
