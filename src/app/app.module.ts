@@ -13,6 +13,8 @@ import { AddproductComponent } from './components/addproduct/addproduct.componen
 import { ProductServiceComponent } from './services/product-service/product-service.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdateproductComponent } from './components/updateproduct/updateproduct.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { SigninComponent } from './components/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { UpdateproductComponent } from './components/updateproduct/updateproduct
     AddproductComponent,
     ProductServiceComponent,
     UpdateproductComponent,
+    SignupComponent,
+    SigninComponent,
     
     
   ],

@@ -13,9 +13,11 @@
       <div class="form-group">
         <label for="pwd">Img:</label>
         <input type="file" name="img" (change)="onFileChanged($event)" class="form-control" id="pwd">
+        <h1>Ảnh Cũ: <img src={{product.img}} width="80" alt=""></h1>
       </div>
+      
       <div class="form-group">
-        <label for="pwd">Desc:</label>
+        <label for="pwd">Update:</label>
         <input type="text" [(ngModel)]="product.desc" name="desc" class="form-control" id="pwd">
       </div>
       <button class="btn btn-primary">Edit</button>
